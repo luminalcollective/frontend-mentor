@@ -10,11 +10,7 @@ Build a QR code card that closely matches the supplied design and remains usable
 
 ### Screenshot
 
-Add a screenshot of the completed project here, for example:
-
-```md
-![Screenshot of the QR code component](./screenshot.png)
-```
+![QR Code Component – Completed Design](./images/qrcode-screenshot.jpeg)
 
 ### Links
 

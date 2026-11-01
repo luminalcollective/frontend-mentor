@@ -11,7 +11,6 @@
   --lc-gold: #f5b700;
   --lc-magenta: #ff3fa4;
   --lc-white: #f5f7fa;
-
   --surface: #151821;
   --surface-raised: #1b1f2a;
   --ink: var(--lc-white);
@@ -61,13 +60,19 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 5px; border-r
    ========================================================== */
 .site-header { border-bottom: 1px solid var(--border); background: #10131a; }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: 1.15rem; }
-.brand { display: inline-flex; gap: .8rem; align-items: center; color: var(--ink); text-decoration: none; }
+.brand { display: inline-flex; gap: .65rem; align-items: center; color: var(--ink); text-decoration: none; min-width: 0; }
 .brand:hover { color: var(--ink); }
+/* The approved mini lockup is a PORTRAIT SVG (560x750).
+   Explicit width and height prevent its large intrinsic dimensions
+   from expanding the navigation header. */
 .brand-logo {
   display: block;
-  width: auto;
-  height: 2rem;
-  max-width: 6rem;
+  flex: 0 0 auto;
+  width: 1.6875rem;
+  height: 2.25rem;
+  max-width: 1.6875rem;
+  max-height: 2.25rem;
+  object-fit: contain;
 }
 .brand-subtitle {
   color: var(--lc-cyan);

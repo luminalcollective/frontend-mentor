@@ -1,61 +1,63 @@
-# Frontend Mentor - QR Code Component
+# Frontend Mentor Projects
 
-This is my solution to the [QR Code Component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). The project focuses on semantic HTML, responsive CSS, and a simple, reusable layout structure.
+A growing collection of [Frontend Mentor](https://www.frontendmentor.io/) challenges completed by [Luminal Collective](https://github.com/luminalcollective). The goal is to strengthen frontend fundamentals through practical projects, with an emphasis on semantic HTML, responsive layouts, maintainable CSS and accessibility.
 
-## Overview
+**Portfolio:** https://luminalcollective.github.io/frontend-mentor/  
+**Repository:** https://github.com/luminalcollective/frontend-mentor
 
-### The challenge
+> The portfolio URL assumes this repository is named `frontend-mentor` and GitHub Pages publishes from the repository root on the `main` branch.
 
-Build a QR code card that closely matches the supplied design and remains usable across mobile and desktop viewport sizes.
+## Projects
 
-### Screenshot
+| Challenge | Live demo | Source | Technologies |
+| --- | --- | --- | --- |
+| QR Code Component | [View project](https://luminalcollective.github.io/frontend-mentor/projects/qr-code-component/) | [View files](./projects/qr-code-component/) | HTML, CSS |
 
-![QR Code Component – Completed Design](./images/qrcode-screenshot.jpeg)
+![Screenshot of the QR Code Component](./projects/qr-code-component/images/qrcode-screenshot.jpeg)
 
-### Links
+## Repository structure
 
-- **Live site (current):** https://luminalcollective.github.io/frontend-mentor/
-- **Repository (current):** https://github.com/luminalcollective/frontend-mentor
+```text
+frontend-mentor/
+├── index.html                  # Portfolio homepage
+├── README.md                   # Repository overview
+└── projects/
+    └── qr-code-component/
+        ├── index.html
+        ├── README.md
+        ├── css/
+        │   └── style.css
+        └── images/
+            ├── image-qr-code.png
+            ├── favicon-32x32.png
+            └── qrcode-screenshot.jpeg
+```
 
-> **Planned rename:** `frontend-mentor-qrcode`. After renaming the repository and confirming GitHub Pages deployment, update the links above to `https://github.com/luminalcollective/frontend-mentor-qrcode` and `https://luminalcollective.github.io/frontend-mentor-qrcode/`.
+Each challenge lives in its own folder with its own assets and documentation. The root `index.html` serves as the portfolio index.
 
-## My process
+## Running locally
 
-### Built with
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/luminalcollective/frontend-mentor.git
+   ```
+2. Open `index.html` in a browser to view the portfolio.
+3. Open `projects/qr-code-component/index.html` to view the QR Code Component.
 
-- Semantic HTML5
-- CSS custom properties for design tokens
-- CSS Grid for centring the card
-- Intrinsically responsive container sizing with `min()` and `calc()`
-- Relative units (`rem`) and logical properties
-- Google Fonts — Outfit
-- Accessible focus styles
+For these static HTML/CSS projects, no build step is required.
 
-### What I learned
+## Adding another challenge
 
-This challenge helped me practise separating layout responsibilities:
+1. Create a new folder under `projects/` using a descriptive, lowercase, hyphenated name.
+2. Keep that challenge's `index.html`, CSS, images and README together in its folder.
+3. Add a new project card to the root `index.html`.
+4. Add a new row to the **Projects** table above.
+5. Test the new project's relative asset paths and live URL after deployment.
 
-- `.page-layout` centres the content within the available viewport.
-- `.container` limits the content width and maintains horizontal gutters.
-- `.card` controls the component's background, padding, border radius, and shadow.
+## Accessibility and responsiveness
 
-I also learned that responsive design does not always require media queries. A fluid container and naturally flowing content can adapt to different screen widths without changing the layout at a breakpoint.
+Projects aim to follow WCAG 2.2 AA principles. Accessibility is assessed per project rather than assumed: test keyboard navigation, visible focus, contrast, text resizing, zoom and layouts from 320px upward. Automated checks can help but do not replace manual testing.
 
-### Continued development
+## Acknowledgements
 
-I want to improve my skills in semantic HTML, the CSS box model, reusable container classes, Flexbox, Grid, accessible interaction states, and responsive design. Future Frontend Mentor challenges will help me apply these foundations to more complex page layouts.
-
-### Useful resources
-
-- [MDN — CSS box sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
-- [MDN — CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout)
-- [MDN — CSS values and units](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-- [Frontend Mentor](https://www.frontendmentor.io/)
-
-## Author
-
-- GitHub — [@luminalcollective](https://github.com/luminalcollective)
-
-## Acknowledgments
-
-Challenge design and assets provided by [Frontend Mentor](https://www.frontendmentor.io/).
+Challenges and design assets are provided by [Frontend Mentor](https://www.frontendmentor.io/). Implementations and portfolio organisation are by [Luminal Collective](https://github.com/luminalcollective).

@@ -1,70 +1,87 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frontend Mentor projects by Luminal Collective: a growing collection of responsive, accessible web interfaces.">
+  <meta name="color-scheme" content="light">
+  <title>Frontend Mentor Projects | Luminal Collective</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --background: #f5f7fb;
+      --surface: #fff;
+      --ink: #18243a;
+      --muted: #46556b;
+      --accent: #174ca1;
+      --border: #d8e0ec;
+      --radius: 1rem;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { margin: 0; min-height: 100vh; background: var(--background); color: var(--ink); line-height: 1.6; }
+    a { color: var(--accent); text-underline-offset: .2em; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-radius: .2rem; }
+    img { display: block; max-width: 100%; height: auto; }
+    .container { width: min(100% - 2rem, 68rem); margin-inline: auto; }
+    .site-header { padding-block: 1.5rem; border-bottom: 1px solid var(--border); background: var(--surface); }
+    .site-header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .75rem; }
+    .brand { font-size: 1.05rem; font-weight: 800; text-decoration: none; color: var(--ink); }
+    .hero { padding-block: clamp(3rem, 8vw, 6rem) 2.5rem; }
+    .eyebrow { color: var(--accent); font-weight: 750; letter-spacing: .09em; text-transform: uppercase; font-size: .8rem; }
+    h1 { font-size: clamp(2.1rem, 5vw, 3.7rem); line-height: 1.12; letter-spacing: -.035em; margin: .6rem 0 1rem; }
+    .intro { color: var(--muted); max-width: 43rem; font-size: 1.1rem; }
+    .projects { padding-block: 1rem 5rem; }
+    .section-heading { margin-bottom: 1.25rem; font-size: 1.5rem; }
+    .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: 1.5rem; }
+    .project-card { overflow: hidden; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: 0 12px 30px rgb(24 36 58 / .05); }
+    .project-image { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: center; background: #d6e2f0; }
+    .project-content { padding: 1.4rem; }
+    .project-content h3 { margin: 0 0 .5rem; font-size: 1.2rem; }
+    .project-content p { color: var(--muted); margin: 0 0 1rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: 1.25rem; }
+    .tag { background: #eaf0f9; border-radius: 999px; padding: .15rem .6rem; font-size: .8rem; font-weight: 650; }
+    .links { display: flex; flex-wrap: wrap; gap: 1rem; font-weight: 700; }
+    .site-footer { padding-block: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: .9rem; }
+    @media (prefers-reduced-motion: no-preference) { a { transition: color .15s ease; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="./" aria-label="Frontend Mentor Projects home">Frontend Mentor Projects</a>
+      <a href="https://github.com/luminalcollective/frontend-mentor">View repository</a>
+    </div>
+  </header>
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    >
+  <main>
+    <section class="hero container" aria-labelledby="page-title">
+      <p class="eyebrow">Luminal Collective · Frontend practice</p>
+      <h1 id="page-title">Learning by building.</h1>
+      <p class="intro">A growing collection of Frontend Mentor challenges built with semantic HTML, responsive CSS and accessibility in mind. Each project is a chance to improve the fundamentals, one component at a time.</p>
+    </section>
 
-    <meta
-      name="description"
-      content="A responsive and accessible QR code component built for the Frontend Mentor challenge using semantic HTML and modern CSS."
-    >
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./images/favicon/LC_Favicon_16.png"
-    >
-
-    <link rel="icon" type="image/svg+xml" href="./images/favicon/LC_Favicon.svg">
-    <link rel="icon" type="image/x-icon" href="./images/favicon/LC_Favicon.ico" sizes="any">
-
-    <link rel="stylesheet" href="./css/style.css">
-
-    <title>Frontend Mentor | QR Code Component</title>
-  </head>
-
-  <body>
-    <!-- Main content -->
-    <main class="page-layout">
-      <div class="container">
-        <article class="card">
-          <img
-            src="./images/qr-code/image-qr-code.png"
-            alt="QR code to visit Frontend Mentor"
-            class="qr-code"
-            width="288"
-            height="288"
-          >
-
-          <h1 class="title">
-            Improve your front-end skills by building projects
-          </h1>
-
-          <p class="description">
-            Scan the QR code to visit Frontend Mentor
-            and take your coding skills to the next level.
-          </p>
+    <section class="projects container" aria-labelledby="projects-heading">
+      <h2 class="section-heading" id="projects-heading">Projects</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <img class="project-image" src="./projects/qr-code-component/images/qrcode-screenshot.jpeg" alt="Screenshot of the completed QR Code Component" width="800" height="500" loading="lazy">
+          <div class="project-content">
+            <h3>QR Code Component</h3>
+            <p>A compact, responsive QR card built with semantic HTML and modern CSS.</p>
+            <div class="tags" aria-label="Technologies used"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Responsive design</span></div>
+            <div class="links">
+              <a href="./projects/qr-code-component/">Live demo</a>
+              <a href="https://github.com/luminalcollective/frontend-mentor/tree/main/projects/qr-code-component">Source code</a>
+            </div>
+          </div>
         </article>
       </div>
-    </main>
+    </section>
+  </main>
 
-    <!-- Attribution -->
-    <footer class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge">
-        Frontend Mentor
-      </a>.
-
-      Coded by
-      <a href="https://github.com/luminalcollective">
-        Luminal Collective
-      </a>.
-    </footer>
-  </body>
+  <footer class="site-footer">
+    <div class="container">Built by <a href="https://github.com/luminalcollective">Luminal Collective</a> · Challenges from <a href="https://www.frontendmentor.io/">Frontend Mentor</a>.</div>
+  </footer>
+</body>
 </html>

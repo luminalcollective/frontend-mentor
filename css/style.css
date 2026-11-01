@@ -52,6 +52,10 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  min-height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
 
   background-color: var(--slate-300);
   color: var(--slate-900);
@@ -76,8 +80,7 @@ a {
    ========================================================== */
 
 .page-layout {
-  min-height: 100vh;
-  min-height: 100dvh;
+  flex: 1;
 
   display: grid;
   place-items: center;
@@ -139,7 +142,9 @@ a {
   font-size: var(--fs-heading);
   font-weight: var(--fw-700);
   line-height: 1.25;
+
   text-wrap: balance;
+  overflow-wrap: break-word;
 }
 
 .description {
@@ -151,7 +156,9 @@ a {
   font-size: var(--fs-body);
   font-weight: var(--fw-400);
   line-height: 1.4;
+
   text-wrap: pretty;
+  overflow-wrap: break-word;
 }
 
 /* ==========================================================
@@ -167,32 +174,54 @@ a {
 
 .attribution a {
   color: var(--slate-900);
+
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
 
 .attribution a:hover {
-  text-decoration: none;
-}
-
-.attribution a:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 3px;
+  text-decoration-thickness: 2px;
 }
 
 /* ==========================================================
-   09. RESPONSIVE ADJUSTMENTS
+   09. ACCESSIBILITY
+   ========================================================== */
+
+/* Visible keyboard focus */
+
+a:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* Honour increased contrast preferences */
+
+@media (prefers-contrast: more) {
+  .description {
+    color: var(--slate-900);
+  }
+
+  a {
+    text-decoration-thickness: 2px;
+  }
+}
+
+/* ==========================================================
+   10. RESPONSIVE ADJUSTMENTS
    ========================================================== */
 
 /*
   The container is intrinsically responsive.
 
-  It grows up to 20rem and automatically shrinks
-  on smaller viewports while preserving 1rem gutters.
+  Maximum width: 20rem (320px at default root size).
+  Minimum horizontal gutter: 1rem per side.
 
-  No width-based media query is necessary for this
+  No width-based breakpoint is needed for this
   single-column component.
 */
+
+/* Reduce vertical spacing on shorter viewports */
 
 @media (max-height: 35rem) {
   .page-layout {
